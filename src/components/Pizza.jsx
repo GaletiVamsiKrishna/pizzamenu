@@ -1,20 +1,17 @@
 import React from 'react'
 
-export default function Pizza({pizzaData}) {
+export default function Pizza({pizzaObj}) {
   return (
-    <>
-      {
-        pizzaData.map((item)=>{
-          return(
-            <div className='pizza'>
-              <img src={item.photoName} alt="" />
-              <h3>{item.name}</h3>
-              <p>{item.ingredients}</p>
-              <span>{item.price}</span>
+    <li className='pizza'>
+      <img src={pizzaObj.photoName} alt={pizzaObj.name} />
+         
+            <div>
+              <h3>{pizzaObj.name}</h3>
+              <p>{pizzaObj.ingredients}</p>
+              <span>{pizzaObj.price}</span>
             </div>
-          )
-        })
-      }
-    </>
+          
+ 
+    </li>
   )
 }
