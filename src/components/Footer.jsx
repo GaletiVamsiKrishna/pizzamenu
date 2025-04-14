@@ -1,4 +1,5 @@
 import React from 'react'
+import Order from './Order';
 
 export default function Footer() {
   const hour = new Date().getHours();
@@ -25,12 +26,7 @@ export default function Footer() {
         {/* Terniary Operator Conditional Rendering */}
         {
           isOpen ? (
-            <div className='order'>
-              <p>
-                We're open unitl {closeHour}.00. Come visit us & order online.
-              </p>
-              <button className='btn'>OrderNow</button>
-            </div>
+            <Order closeHour={closeHour}/>
           ) : (
             <p>
               We're happy to welcome you between {openHour}:00 and {closeHour}:00.
