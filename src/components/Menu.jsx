@@ -23,12 +23,21 @@ export default function Menu() {
 
       {/* Terniary Operator */}
       {
-        numPizzas > 0 ? (<ul className='pizzas'>
+        numPizzas > 0 ? (
+        // Fragments Implementation
+        <>
+          <p>Authentic Itallian cuisine. 6 Creative dishes to choose from. All from      
+             our stone oven, all organic, all delicious</p>
+        <ul className='pizzas'>
         {
           pizzas.map((pizza)=> <Pizza pizzaObj = {pizza}  key={pizza.name}/>
           )
         }
-      </ul>): (<p>We're stil working on our menu. Please come back later</p>)
+       </ul>
+        
+        
+        </>
+      ): (<p>We're stil working on our menu. Please come back later</p>)
       }
       {/* <Pizza pizzaData={pizzaData}/> */}
       
